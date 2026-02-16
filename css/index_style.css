@@ -1,0 +1,188 @@
+
+/* TODO EL HTML */
+
+* {
+
+}
+
+/* TODO EL BODY */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TODO EL HEADER */
+
+header {
+    background-color: grey;
+    color: white;
+    padding-left: 1%;
+}
+
+#menu_gral {
+    font-family: verdana, sans sherif;
+    width: 80%;
+    margin: 1.5rem auto;
+}
+#menu_gral ul {
+    list-style-type: none; 
+    text-align: center;
+    font-size: 0px;
+}
+#menu_gral > ul li {
+    display: inline-block;
+    width: 25%;
+    position: relative;
+    background: #FF7361;
+}
+#menu_gral li a {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    color: #444;
+}
+#menu_gral li:hover a, #menu_gral li a:focus {
+    background: #8DA889;
+    color: #fff;
+}
+
+#menu_gral li ul {
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+}
+
+/* TODO EL MAIN */
+
+main {
+    background-color: rgb(212, 186, 186);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.margenBox {
+    border: 2px solid red;
+}
+
+.contenido {
+    width: 95%;
+    max-width: 800px;    /* Reducimos el ancho máximo */
+    margin: 0 auto;         /* centra todo horizontalmente */
+}
+
+main h1 {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px; /* Esto controla qué tan "junto" está del slider */
+}
+
+.seleccion {
+    /* --- Posicionamiento y Centrado --- */
+    display: block;          /* Permite que el margen 'auto' funcione */
+    margin: 30px auto;       /* 30px de separación con los personajes y centrado horizontal */
+    width: fit-content;      /* El botón solo ocupa el ancho de su texto */
+    
+    /* --- Tamaño y Forma --- */
+    padding: 15px 40px;      /* 15px arriba/abajo y 40px a los lados (lo hace más grande) */
+    font-size: 24px;         /* Texto más grande y legible */
+    border-radius: 8px;      /* Bordes ligeramente redondeados para un look moderno */
+    
+    /* --- Estilo Visual --- */
+    font-style: italic;
+    text-align: center;
+    color: black;
+    border: 3px solid rgb(0, 0, 0); /* Un poco más de grosor para que destaque */
+    background-color: rgb(196, 196, 196);
+    
+    cursor: pointer;
+    transition: all 0.2s ease; /* Suaviza el cambio de color al pasar el ratón */
+}
+
+/* Efecto al pasar el ratón (opcional pero recomendado) */
+.seleccion:hover {
+    background-color: rgb(150, 150, 150);
+    transform: scale(1.05); /* El botón crece un poquito al tocarlo */
+}
+
+.slider {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: rgb(212, 186, 186);
+}
+
+.principal, .secundaria {
+    object-fit: contain;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.principal {
+    width: 45%;          /* Imagen central más pequeña */
+    height: 90%;
+    z-index: 5;          /* Encima de todas */
+}
+
+.secundaria {
+    width: 30%;          /* Laterales pequeñas */
+    height: 60%;
+    opacity: 0.5;
+    z-index: 1;          /* Debajo de la principal */
+    
+    /* El truco del margen negativo para que se metan debajo */
+    margin-left: -10%;
+    margin-right: -10%;
+}
+
+/* Flechas fuera de las imágenes */
+.flecha {
+    position: absolute;
+    top: 50%;
+    
+    z-index: 10;
+    background-color: rgb(212, 186, 186);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 40px;
+}
+
+.flecha.izquierda {
+    left: 10px; /* Cerca del borde izquierdo interior */
+    transform: translateY(-50%) scaleX(-1);
+}
+
+.flecha.derecha {
+    right: 10px; /* Cerca del borde derecho interior */
+    transform: translateY(-50%);
+}
+
+/* Flecha Izquierda: Mantiene el -1 para seguir mirando a la izquierda */
+.flecha.izquierda:hover {
+    transform: translateY(-50%) scaleX(-1) scale(1.2); /* Antes tenías scaleX(1) */
+    transition: transform 0.2s ease;
+}
+
+/* Flecha Derecha: Mantiene el 1 (o nada) para seguir mirando a la derecha */
+.flecha.derecha:hover {
+    transform: translateY(-50%) scaleX(1) scale(1.2); /* Antes tenías scaleX(-1) */
+    transition: transform 0.2s ease;
+}
+
+/* TODO EL FOOTER */
+
+footer {
+    background-color: grey;
+    color: white;
+    padding: 1%;
+    text-align: center;
+}

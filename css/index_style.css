@@ -1,7 +1,4 @@
 
-/* Generales */
-* {
-}
 
 /* Generales: body */
 body {
@@ -14,15 +11,26 @@ body {
     background-size: cover;
 }
 
-/* Header */
+/*? Header ?*/
 header {
     background-color: transparent;
     color: rgb(255, 255, 255);
     padding-left: 1%;
 }
+/*modificar el titulo*/
+header h1{
+    border: 1px solid black;
+    width: 720px;
+    font-size: 50px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    top: 50px;
+    left: 120px;
+}
 
+/*? -------------- ?*/
 
-/* Selector */
+/** SELECTOR **/
 .menu-desplegable {
   position: relative;
   font-family: Arial, sans-serif;
@@ -32,13 +40,14 @@ header {
 }
 
 .boton-principal {
-  background-color: rgb(44, 62, 80);
-  color: rgb(255, 255, 255);
-  padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: rgb(44, 62, 80);
+    color: rgb(255, 255, 255);
+    padding: 17px 29px;
+    font-size: 20px;
+    min-width: 180px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .boton-principal:hover {
@@ -74,18 +83,15 @@ header {
 .menu-desplegable:hover .lista-opciones {
   display: block;
 }
+/** -------------- **/
 
-/* Main */
+/*/ MAIN /*/
 main {
     background-color: transparent;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.margenBox {
-    border: 2px solid rgb(255, 0, 0);
 }
 
 .contenido {
@@ -150,8 +156,8 @@ main h1 {
     margin-left: -10%;
     margin-right: -10%;
 }
+/*/ -------------- /*/
 
-/* Slider */
 .flecha {
     position: absolute;
     top: 50%;
@@ -185,10 +191,123 @@ main h1 {
     transition: transform 0.2s ease;
 }
 
-/* Footer */
+
+/*# LÓGICA DEL CARRUSEL Y BOTONES #*/
+
+.tarjetas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta {
+    position: absolute;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, z-index 0.4s, width 0.4s, height 0.4s;
+    border-radius: 10px;
+    width: 30%;
+    height: 60%;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* LÓGICA IMÁGENES */
+#posicion1:checked ~ .slider .tarjetas #img1,
+#posicion2:checked ~ .slider .tarjetas #img2,
+#posicion3:checked ~ .slider .tarjetas #img3 { 
+    transform: translateX(0); 
+    width: 45%;    
+    height: 90%;   
+    z-index: 5;    
+    opacity: 1; 
+}
+
+#posicion1:checked ~ .slider .tarjetas #img2,
+#posicion2:checked ~ .slider .tarjetas #img3,
+#posicion3:checked ~ .slider .tarjetas #img1 { 
+    transform: translateX(80%); 
+}
+
+#posicion1:checked ~ .slider .tarjetas #img3,
+#posicion2:checked ~ .slider .tarjetas #img1,
+#posicion3:checked ~ .slider .tarjetas #img2 { 
+    transform: translateX(-80%); 
+}
+
+/* LÓGICA FLECHAS */
+.controles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    pointer-events: none;
+}
+
+#posicion1:checked ~ .slider .controles-1,
+#posicion2:checked ~ .slider .controles-2,
+#posicion3:checked ~ .slider .controles-3 { 
+    display: block; 
+}
+
+label.flecha {
+    pointer-events: auto;
+    display: flex;
+}
+
+/* BOTONES DE SELECCIÓN */
+
+/* Los botones estan ocultos por defecto */
+.contenedor-seleccion .seleccion {
+    display: none;
+    text-decoration: none;
+}
+
+/* Mostramos el botón correspondiente a la imagen central */
+#posicion1:checked ~ .contenedor-seleccion .btn-1 { 
+    display: block; 
+}
+#posicion2:checked ~ .contenedor-seleccion .btn-2 { 
+    display: block; 
+}
+#posicion3:checked ~ .contenedor-seleccion .btn-3 { 
+    display: block; 
+}
+
+/* TITULOS DE PERSONAJES */
+
+/* Los titulos estan ocultos por defecto */
+.contenedor-titulo .titulo{
+    display: none;
+}
+
+/* Mostramos el titulo correspondiente a la imagen central */
+#posicion1:checked ~ .contenedor-titulo .t1{
+    display: block;
+}
+
+#posicion2:checked ~ .contenedor-titulo .t2{
+    display: block;
+}
+
+#posicion3:checked ~ .contenedor-titulo .t3{
+    display: block;
+}
+
+/*! Footer !*/
 footer {
     background-color: transparent;
     color: #ffffff;
     padding: 1%;
     text-align: center;
 }
+/*! -------------- !*/

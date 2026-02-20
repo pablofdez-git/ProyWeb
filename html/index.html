@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Buenos dias</h1>
+        <h1>SELECTOR DE PERSONAJES</h1>
         <div class="menu-desplegable">
             <button class="boton-principal">
                 Elegir Clase ▼
@@ -22,19 +22,47 @@
         </div>
     </header>
     <main>
-        <div class="contenido">
-            <h1 class="margenBox">Player</h1>
-            <div class="slider margenBox">
-                <img src="../imagenes/placeholder_silueta.png" alt="Imagen secundaria" class="secundaria">
-                <img src="../imagenes/placeholder_silueta.png" alt="Imagen principal" class="principal">
-                <img src="../imagenes/placeholder_silueta.png" alt="Imagen secundaria" class="secundaria">
+    <div class="contenido">
+        
+        
+        <input type="radio" name="carrusel" id="posicion1" checked hidden>
+        <input type="radio" name="carrusel" id="posicion2" hidden>
+        <input type="radio" name="carrusel" id="posicion3" hidden>
 
-                <button class="flecha izquierda"><img src="../imagenes/FlechaUsada.png" alt="Felcha Izquierda"></button>
-                <button class="flecha derecha"><img src="../imagenes/FlechaUsada.png" alt="Flecha Derecha"></button>
-            </div>
-            <button class="seleccion">SELECCIONAR</button>
+        <div class="contenedor-titulo">
+            <h1 class="titulo t1">Personaje 1</h1>
+            <h1 class="titulo t2">Personaje 2</h1>
+            <h1 class="titulo t3">Personaje 3</h1>
         </div>
-    </main>
+
+        <div class="slider margenBox">
+            <div class="tarjetas">
+                <div class="tarjeta" id="img1"><img src="../imagenes/placeholder_silueta.png" alt="Personaje 1"></div>
+                <div class="tarjeta" id="img2"><img src="../imagenes/placeholder_silueta.png" alt="Personaje 2"></div>
+                <div class="tarjeta" id="img3"><img src="../imagenes/placeholder_silueta.png" alt="Personaje 3"></div>
+            </div>
+
+            <div class="controles controles-1">
+                <label for="posicion3" class="flecha izquierda"><img src="../imagenes/FlechaUsada.png" alt="Anterior"></label>
+                <label for="posicion2" class="flecha derecha"><img src="../imagenes/FlechaUsada.png" alt="Siguiente"></label>
+            </div>
+            <div class="controles controles-2">
+                <label for="posicion1" class="flecha izquierda"><img src="../imagenes/FlechaUsada.png" alt="Anterior"></label>
+                <label for="posicion3" class="flecha derecha"><img src="../imagenes/FlechaUsada.png" alt="Siguiente"></label>
+            </div>
+            <div class="controles controles-3">
+                <label for="posicion2" class="flecha izquierda"><img src="../imagenes/FlechaUsada.png" alt="Anterior"></label>
+                <label for="posicion1" class="flecha derecha"><img src="../imagenes/FlechaUsada.png" alt="Siguiente"></label>
+            </div>
+        </div>
+
+        <div class="contenedor-seleccion">
+            <a href="personaje1.html" class="seleccion btn-1">SELECCIONAR</a>
+            <a href="personaje2.html" class="seleccion btn-2">SELECCIONAR</a>
+            <a href="personaje3.html" class="seleccion btn-3">SELECCIONAR</a>
+        </div>
+    </div>
+</main>
     <footer>
         <div>
             <h1>Buenos dias</h1>

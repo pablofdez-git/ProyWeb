@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index_style.css">
-    <title>Pagina Principal</title>
-</head>
-<body>
-    <header>
-        <h1>SELECTOR DE PERSONAJES</h1>
-        <div class="menu-desplegable">
-            <button class="boton-principal">
-                Elegir Clase ▼
-            </button>
-  
-            <ul class="lista-opciones">
-                <li><a href="personaje1.html">Personaje 1</a></li>
-                <li><a href="personaje2.html">Personaje 2</a></li>
-                <li><a href="personaje3.html">Personaje 3</a></li>
-            </ul>
-        </div>
-    </header>
-    <main>
-    <div class="contenido">
-        
-        
-        <input type="radio" name="carrusel" id="posicion1" checked hidden>
-        <input type="radio" name="carrusel" id="posicion2" hidden>
-        <input type="radio" name="carrusel" id="posicion3" hidden>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Título de la pestaña del navegador</title>
+        <link rel="stylesheet" href="../css/index_style.css">
+    </head>
+    <body>
 
-        <div class="contenedor-titulo">
-            <h1 class="titulo t1">Personaje 1</h1>
-            <h1 class="titulo t2">Personaje 2</h1>
-            <h1 class="titulo t3">Personaje 3</h1>
-        </div>
+        <header class="navbar">
+            <div class="titulo">Titulo</div>
 
-        <div class="slider margenBox">
-            <div class="tarjetas">
-                <div class="tarjeta" id="img1"><img src="../imagenes/placeholder_silueta.png" alt="Personaje 1"></div>
-                <div class="tarjeta" id="img2"><img src="../imagenes/placeholder_silueta.png" alt="Personaje 2"></div>
-                <div class="tarjeta" id="img3"><img src="../imagenes/placeholder_silueta.png" alt="Personaje 3"></div>
-            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="selectorPersonajes.html">Personajes</a></li>
+                    <li><a href="#">Iniciar Sesion</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#">Acceso 4</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            <div class="controles controles-1">
-                <label for="posicion3" class="flecha izquierda"><img src="../imagenes/FlechaUsada.png" alt="Anterior"></label>
-                <label for="posicion2" class="flecha derecha"><img src="../imagenes/FlechaUsada.png" alt="Siguiente"></label>
-            </div>
-            <div class="controles controles-2">
-                <label for="posicion1" class="flecha izquierda"><img src="../imagenes/FlechaUsada.png" alt="Anterior"></label>
-                <label for="posicion3" class="flecha derecha"><img src="../imagenes/FlechaUsada.png" alt="Siguiente"></label>
-            </div>
-            <div class="controles controles-3">
-                <label for="posicion2" class="flecha izquierda"><img src="../imagenes/FlechaUsada.png" alt="Anterior"></label>
-                <label for="posicion1" class="flecha derecha"><img src="../imagenes/FlechaUsada.png" alt="Siguiente"></label>
-            </div>
-        </div>
+        <main>
+            <section class="seccionPrincipal">
+                <h1>TÍTULO PRINCIPAL</h1>
+                <p>Breve descripción del contenido de la página o introducción al tema.</p>
+                <button><a href="#">Comprar</a></button>
+            </section>
 
-        <div class="contenedor-seleccion">
-            <a href="personaje1.html" class="seleccion btn-1">SELECCIONAR</a>
-            <a href="personaje2.html" class="seleccion btn-2">SELECCIONAR</a>
-            <a href="personaje3.html" class="seleccion btn-3">SELECCIONAR</a>
-        </div>
-    </div>
-</main>
-    <footer>
-        <div>
-            <h1>Buenos dias</h1>
-        </div>
-    </footer>
-</body>
+            <section class="seccion1">
+                <div class="texto">
+                    <h2>Sección 1</h2>
+                    <p>Texto descriptivo del elemento. Aquí va la información detallada de la primera sección.</p>
+                </div>
+                <img src="#" alt="Imagen de la sección 1">
+            </section>
+
+            <section class="seccion2">
+                <img src="#" alt="Imagen de la sección 2">
+                <div class="texto">
+                    <h2>Sección 2</h2>
+                    <p>Texto descriptivo del elemento. Al poner la etiqueta de la imagen primero, se coloca a la izquierda.</p>
+                </div>
+            </section>
+
+            <section class="seccion3">
+                <div class="texto">
+                    <h2>Sección 3</h2>
+                    <p>Texto descriptivo del elemento. Volvemos al orden original para mantener el patrón.</p>
+                </div>
+                <img src="#" alt="Imagen de la sección 3">
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-contenido">
+
+                <p class="copyright">
+                    &copy; 2026 MiApp. Todos los derechos reservados.
+                </p>
+                <ul class="footer-links">
+                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+
+            </div>
+        </footer>
+
+    </body>
 </html>

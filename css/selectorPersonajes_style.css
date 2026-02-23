@@ -1,0 +1,313 @@
+
+
+/* Generales: body */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../imagenes/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*? Header ?*/
+header {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    padding-left: 1%;
+}
+/*modificar el titulo*/
+header h1{
+    border: 1px solid black;
+    width: 720px;
+    font-size: 50px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    top: 50px;
+    left: 120px;
+}
+
+/*? -------------- ?*/
+
+/** SELECTOR **/
+.menu-desplegable {
+  position: relative;
+  font-family: Arial, sans-serif;
+  float: right;
+  right: 120px;
+  top: -20px;
+}
+
+.boton-principal {
+    background-color: rgb(44, 62, 80);
+    color: rgb(255, 255, 255);
+    padding: 17px 29px;
+    font-size: 20px;
+    min-width: 180px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.boton-principal:hover {
+  background-color: rgb(52, 73, 94);
+}
+
+.lista-opciones {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.lista-opciones a {
+  color: rgb(51, 51, 51);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.lista-opciones a:hover {
+  background-color: rgb(241, 241, 241);
+}
+
+.menu-desplegable:hover .lista-opciones {
+  display: block;
+}
+/** -------------- **/
+
+/*/ MAIN /*/
+main {
+    background-color: transparent;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido {
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.seleccion {
+    display: block;
+    margin: 30px auto;
+    width: fit-content;
+    padding: 15px 40px;
+    font-size: 24px;
+    border-radius: 8px;
+    font-style: italic;
+    text-align: center;
+    color: black;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(196, 196, 196);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.seleccion:hover {
+    background-color: rgb(150, 150, 150);
+    transform: scale(1.05);
+}
+
+.slider {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: transparent;
+}
+
+.principal, .secundaria {
+    object-fit: contain;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.principal {
+    width: 45%;
+    height: 90%;
+    z-index: 5;
+}
+
+.secundaria {
+    width: 30%;
+    height: 60%;
+    opacity: 0.5;
+    z-index: 1;
+    margin-left: -10%;
+    margin-right: -10%;
+}
+/*/ -------------- /*/
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 40px;
+}
+
+.flecha.izquierda {
+    left: 10px;
+    transform: translateY(-50%) scaleX(-1);
+}
+
+.flecha.derecha {
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.flecha.izquierda:hover {
+    transform: translateY(-50%) scaleX(-1) scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+.flecha.derecha:hover {
+    transform: translateY(-50%) scaleX(1) scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+
+/*# LÓGICA DEL CARRUSEL Y BOTONES #*/
+
+.tarjetas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta {
+    position: absolute;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, z-index 0.4s, width 0.4s, height 0.4s;
+    border-radius: 10px;
+    width: 30%;
+    height: 60%;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* LÓGICA IMÁGENES */
+#posicion1:checked ~ .slider .tarjetas #img1,
+#posicion2:checked ~ .slider .tarjetas #img2,
+#posicion3:checked ~ .slider .tarjetas #img3 { 
+    transform: translateX(0); 
+    width: 45%;    
+    height: 90%;   
+    z-index: 5;    
+    opacity: 1; 
+}
+
+#posicion1:checked ~ .slider .tarjetas #img2,
+#posicion2:checked ~ .slider .tarjetas #img3,
+#posicion3:checked ~ .slider .tarjetas #img1 { 
+    transform: translateX(80%); 
+}
+
+#posicion1:checked ~ .slider .tarjetas #img3,
+#posicion2:checked ~ .slider .tarjetas #img1,
+#posicion3:checked ~ .slider .tarjetas #img2 { 
+    transform: translateX(-80%); 
+}
+
+/* LÓGICA FLECHAS */
+.controles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    pointer-events: none;
+}
+
+#posicion1:checked ~ .slider .controles-1,
+#posicion2:checked ~ .slider .controles-2,
+#posicion3:checked ~ .slider .controles-3 { 
+    display: block; 
+}
+
+label.flecha {
+    pointer-events: auto;
+    display: flex;
+}
+
+/* BOTONES DE SELECCIÓN */
+
+/* Los botones estan ocultos por defecto */
+.contenedor-seleccion .seleccion {
+    display: none;
+    text-decoration: none;
+}
+
+/* Mostramos el botón correspondiente a la imagen central */
+#posicion1:checked ~ .contenedor-seleccion .btn-1 { 
+    display: block; 
+}
+#posicion2:checked ~ .contenedor-seleccion .btn-2 { 
+    display: block; 
+}
+#posicion3:checked ~ .contenedor-seleccion .btn-3 { 
+    display: block; 
+}
+
+/* TITULOS DE PERSONAJES */
+
+/* Los titulos estan ocultos por defecto */
+.contenedor-titulo .titulo{
+    display: none;
+}
+
+/* Mostramos el titulo correspondiente a la imagen central */
+#posicion1:checked ~ .contenedor-titulo .t1{
+    display: block;
+}
+
+#posicion2:checked ~ .contenedor-titulo .t2{
+    display: block;
+}
+
+#posicion3:checked ~ .contenedor-titulo .t3{
+    display: block;
+}
+
+/*! Footer !*/
+footer {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 1%;
+    text-align: center;
+}
+/*! -------------- !*/

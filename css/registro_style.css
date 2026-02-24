@@ -1,83 +1,139 @@
-* {
-    font-family:Arial, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-}
-
+/* Base */
 body {
-    background-image: url(../imagenes/);
-    background-color: rgb(183, 183, 183);
-    background-attachment: fixed;
-    background-size:cover; 
-    background-position: center; 
-    color: rgb(255, 255, 255);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #1a1a1a;
 }
 
-.container {
-    text-shadow: 0 0 5px rgb(42, 60, 95);
-    border-radius: 10px;
-}
-
-#survey-form {
-    border-radius: 10px;
-    padding: 30px 35px;
-    background-color: rgba(65, 93, 129, 0.63);
-    width: 300px;
-    box-shadow: 0 0 15px rgb(10, 15, 49);
-    margin: auto;
-    margin-bottom: 60px;
-} 
-
+/* Header */
 header {
-    font-size: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 20px;
     text-align: center;
-    margin: 40px 0 40px 0;
-    text-shadow: 0 0 15px rgb(153, 174, 236);
 }
 
-#title {
-    margin-bottom: -10px;
+header h1 {
+    margin: 0;
+    font-size: 26px;
 }
 
-.form-control {
-    color: rgb(0, 0, 0);
-    box-sizing: border-box;
-    font-size: 16px;
+/* Navegación */
+nav {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-.form-group label {
-    display: block;
-    padding-top: 3px;
-    padding-bottom: 3px;
+.boton-nav {
+    text-decoration: none;
+    background-color: #e6e6e6;
+    color: #1a1a1a;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
-.form-group input {
-    margin-bottom: 12px;
+.boton-nav:hover {
+    background-color: #dcdcdc;
+    transform: translateY(-2px);
 }
 
-
-.form-group p {
-    margin-bottom: 8px;
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
 }
 
-#name, #email, #contrasenia, #contraseniaR, #primarySurname, #secondarySurname, #number, #submit{
-    border: 0px;
-    border-radius: 5px;
-    min-width: 100%;
-    padding: 8px;
-    box-shadow: 0 0 5px rgb(42, 60, 95);
-    box-sizing: border-box;
-    
+/* Bloque principal */
+.bloque {
+    width: 100%;
+    max-width: 520px;
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-#submit {
-    text-shadow: 0 0 5px rgb(241, 241, 241);
-    font-size: 18px;
+/* Texto hype */
+.mensaje {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mensaje h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.mensaje p {
+    margin-top: 8px;
+    line-height: 1.5;
+    color: #444444;
+}
+
+/* Formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 14px;
+}
+
+.campo input {
     padding: 10px;
-    color: white;
-    margin-top: 25px;
-    box-shadow: 0 0 15px rgb(42, 60, 95);
-    background-color: rgba(25, 39, 53, 0.755);
+    border-radius: 10px;
+    border: 1px solid #cccccc;
 }
 
-#submit:hover {
-    background-color: rgba(0, 0, 0, 0.856);
+.campo input:focus {
+    border-color: #9a9a9a;
+    outline: none;
+}
+
+/* Botón grande */
+.boton-grande {
+    margin-top: 6px;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #cccccc;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.boton-grande:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #d9d9d9;
+    padding: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #555555;
 }

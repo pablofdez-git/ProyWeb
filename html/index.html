@@ -1,72 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Título de la pestaña del navegador</title>
-        <link rel="stylesheet" href="../css/index_style.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaBrawl</title>
+    <link rel="stylesheet" href="../css/index_style.css">
+</head>
+<body>
 
-        <header class="navbar">
-            <div class="titulo">Titulo</div>
+    <header>
+        <h1>NovaBrawl</h1>
 
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="selectorPersonajes.html">Personajes</a></li>
-                    <li><a href="#">Iniciar Sesion</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#">Acceso 4</a></li>
-                </ul>
-            </nav>
-        </header>
+        <nav>
+            <a href="index.html" class="boton-nav">Inicio</a>
+            <a href="selectorPersonajes.html" class="boton-nav">Personajes</a>
+            <a href="registro.html" class="boton-nav">Jugar</a>
+            <a href="info.html" class="boton-nav">Saber más...</a>
+        </nav>
+    </header>
 
-        <main>
-            <section class="seccionPrincipal">
-                <h1>TÍTULO PRINCIPAL</h1>
-                <p>Breve descripción del contenido de la página o introducción al tema.</p>
-                <button><a href="#">Comprar</a></button>
-            </section>
+    <main>
 
-            <section class="seccion1">
-                <div class="texto">
-                    <h2>Sección 1</h2>
-                    <p>Texto descriptivo del elemento. Aquí va la información detallada de la primera sección.</p>
-                </div>
-                <img src="#" alt="Imagen de la sección 1">
-            </section>
+        <!-- INTRO PRINCIPAL -->
+        <section class="intro">
 
-            <section class="seccion2">
-                <img src="#" alt="Imagen de la sección 2">
-                <div class="texto">
-                    <h2>Sección 2</h2>
-                    <p>Texto descriptivo del elemento. Al poner la etiqueta de la imagen primero, se coloca a la izquierda.</p>
-                </div>
-            </section>
+            <h2 class="titulo-grande">
+                Combate estratégico por equipos
+            </h2>
 
-            <section class="seccion3">
-                <div class="texto">
-                    <h2>Sección 3</h2>
-                    <p>Texto descriptivo del elemento. Volvemos al orden original para mantener el patrón.</p>
-                </div>
-                <img src="#" alt="Imagen de la sección 3">
-            </section>
-        </main>
+            <p class="subtitulo">
+                NovaBrawl es un juego competitivo donde cada personaje
+                cumple un rol específico dentro del equipo.
+            </p>
 
-        <footer class="footer">
-            <div class="footer-contenido">
+            <!-- Botón principal -->
+            <a href="registro.html" class="boton-registro">
+                ¡REGISTRATE Y JUEGA!
+            </a>
 
-                <p class="copyright">
-                    &copy; 2026 MiApp. Todos los derechos reservados.
-                </p>
-                <ul class="footer-links">
-                    <li><a href="#">Aviso Legal</a></li>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-
+            <!-- Imagen destacada -->
+            <div class="imagen-principal">
+                Imagen promocional del juego (pendiente)
             </div>
-        </footer>
 
-    </body>
+            <!-- Botón personajes -->
+            <a href="selectorPersonajes.html" class="boton-personajes">
+                ¡VER PERSONAJES!
+            </a>
+
+        </section>
+
+        <!-- DESCRIPCIÓN MÁS DETALLADA -->
+        <section class="bloque">
+
+            <h3>¿Cómo funciona?</h3>
+
+            <p>
+                El sistema de juego se basa en tres clases principales:
+                tanques, ataque y apoyo. Cada una aporta habilidades distintas
+                que deben combinarse correctamente para ganar la partida.
+            </p>
+
+            <p>
+                La cooperación y la estrategia son más importantes que la fuerza individual.
+                Elegir bien tu personaje puede cambiar completamente el desarrollo del combate.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Proyecto LLMM · Pablo · Mario · Jacobo</p>
+    </footer>
+
+</body>
 </html>

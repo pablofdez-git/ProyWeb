@@ -2,32 +2,98 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/personaje3_style.css">
     <title>Personaje 3</title>
+    <link rel="stylesheet" href="../css/personaje3_style.css">
 </head>
 <body>
+
+    <!-- Cabecera común del proyecto -->
     <header>
-        
+        <h1>NovaBrawl</h1>
 
-
-
-
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="selectorPersonajes.html">Personajes</a>
+            <a href="registro.html">Jugar</a>
+            <a href="info.html">Saber más...</a>
+        </nav>
     </header>
+
     <main>
 
+        <!-- Contenedor principal de la ficha -->
+        <section class="ficha-personaje">
 
+            <!-- Zona izquierda: imagen -->
+            <div class="zona-imagen">
+                <img src="../imagenes/placeholder_silueta.png" alt="Imagen del personaje">
+            </div>
 
+            <!-- Zona derecha: información -->
+            <div class="zona-info">
 
+                <!-- Nombre y rol -->
+                <h2>PERSONAJE 3</h2>
+                <p class="rol">Rol: Tanque</p>
 
+                <!-- Descripción breve -->
+                <p class="descripcion">
+                    Leafrox es un personaje resistente pensado para liderar el combate.
+                    No es el más rápido, pero aguanta mucho daño y protege bien a su equipo.
+                </p>
+
+                <!-- Estadísticas -->
+                <div class="estadisticas">
+                    <h3>Estadísticas</h3>
+
+                    <div class="stat">
+                        <span>Vida</span>
+                        <div class="barra">
+                            <div class="relleno vida"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <span>Daño</span>
+                        <div class="barra">
+                            <div class="relleno dano"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <span>Velocidad</span>
+                        <div class="barra">
+                            <div class="relleno velocidad"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Habilidades -->
+                <div class="habilidades">
+                    <h3>Habilidades</h3>
+
+                    <p><strong>Ataque básico:</strong> Golpe frontal que empuja a los enemigos cercanos.</p>
+
+                    <p><strong>Habilidad especial:</strong> Crea una barrera temporal que reduce el daño recibido.</p>
+
+                    <p><strong>Súper:</strong> Aumenta su defensa durante unos segundos.</p>
+                </div>
+
+                <!-- Botón volver -->
+                <div class="boton-volver">
+                    <a href="selectorPersonajes.html">Volver al selector</a>
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
+
+    <!-- Pie de página común -->
     <footer>
-
-
-
-
-
+        <p>Proyecto LLMM · Grupo 3 · Juego ficticio NovaBrawl</p>
     </footer>
+
 </body>
 </html>

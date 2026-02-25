@@ -57,7 +57,7 @@ main {
     gap: 30px;
 }
 
-/* Intro destacada */
+/* Intro */
 .intro {
     max-width: 900px;
     width: 100%;
@@ -75,16 +75,17 @@ main {
     color: #444444;
 }
 
+/* Botón de jugar */
 .boton-registro {
     display: inline-block;
     margin-top: 25px;
     padding: 16px 28px;
-    background-color: #f6ff00;
+    background-color: #ffd900;
     color: #000000;
     text-decoration: none;
     border-radius: 14px;
     font-size: 18px;
-    border: 1px solid #f6ff00;
+    border: 3px solid #000000;
     transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
@@ -97,7 +98,7 @@ main {
 .imagen-principal {
     margin-top: 25px;
     background-color: #ffffff;
-    border: 1px dashed #bbbbbb;
+    border: 3px dashed #bbbbbb;
     border-radius: 16px;
     padding: 60px 20px;
     color: #777777;

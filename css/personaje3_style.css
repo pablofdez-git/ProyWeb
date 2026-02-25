@@ -154,11 +154,11 @@ main {
 /* Relleno base */
 .relleno {
     height: 100%;
-    background-color: #8a8a8a; /* gris medio */
-    width: 50%; /* valor por defecto */
+    background-color: #8a8a8a;
+    width: 50%;
 }
 
-/* Valores de ejemplo (cambia porcentajes cuando quieras) */
+/* Valores de ejemplo */
 .relleno.vida {
     width: 85%;
 }
@@ -212,7 +212,7 @@ footer {
     font-size: 13px;
 }
 
-/* Responsive simple */
+/* Responsive */
 @media (max-width: 820px) {
     .ficha-personaje {
         flex-direction: column;

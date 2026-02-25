@@ -93,7 +93,7 @@ main {
     gap: 16px;
 }
 
-/* Carta clicable */
+/* Carta */
 .carta {
     text-decoration: none;
     color: inherit;
@@ -120,7 +120,7 @@ main {
     object-fit: contain;
 }
 
-/* Hover: se resalta y crece un poco */
+/* Hover: se resalta */
 .carta:hover .cuadro {
     transform: scale(1.04);
     border-color: #9a9a9a;

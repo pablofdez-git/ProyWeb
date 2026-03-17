@@ -10,40 +10,57 @@ body {
 }
 
 /* Cabecera */
-header {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
     background-color: #ffffff;
     border-bottom: 1px solid #d9d9d9;
-    padding: 16px 20px;
+}
 
+/* Agrupa logo + nav */
+.header-izq {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    gap: 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+.logo {
+    height: 65px;
 }
 
-/* Menú */
-nav {
+.nav {
     display: flex;
-    gap: 12px;
+    gap: 15px;
 }
 
-nav a {
+/* Botones normales */
+.nav-link {
     text-decoration: none;
     color: #1a1a1a;
     padding: 8px 12px;
-    border-radius: 10px;
+    border-radius: 8px;
     transition: background-color 0.15s ease;
 }
 
-nav a:hover {
-    background-color: #e9e9e9;
+.nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* Botón de jugar */
+.boton-jugar {
+    text-decoration: none;
+    background-color: #ffd900;
+    color: #1a1a1a;
+    border: 2px solid #000;
+    border-radius: 3px;
+    padding: 12px 22px; 
+    font-weight: bold;
+}
+
+.boton-jugar:hover {
+    background-color: #ffaa00;
 }
 
 /* Contenido principal */

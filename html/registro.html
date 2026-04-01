@@ -14,7 +14,7 @@
 
             <!-- Texto -->
             <div class="mensaje">
-                <h2>¡Preregistro abierto!</h2>
+                <h2 id="titulo">¡Preregistro abierto!</h2>
                 <p class="linea"></p>
                 <p>
                     NovaBrawl todavía está en desarrollo, pero ya puedes reservar tu nombre.
@@ -30,7 +30,6 @@
                     <label for="id-user norequeridos">ID de usuario</label>
                     <input type="text" id="id-user" placeholder="Introduzca su id-user" required>
                 </div>
-                
                 
                 <div class="campo norequeridos">
                     <label for="nombre">Nombre</label>
@@ -61,21 +60,20 @@
                     <p class="linea"></p>
 
                     <div class="campo bajo">
-                        <button type="submit" class="boton-grande">
+                        <button type="submit" id="boton-submit" class="boton-grande">
                             ¡Registrate!
                         </button>
                     </div>
 
                     <div class="aviso"> 
                         <p>
-                           Ya tienes cuenta? <button type="" class=""> Inicie sesión</button>
+                            <span id="texto-aviso">Ya tienes cuenta?</span><button type="button" id="aviso"> Inicie sesión</button>
                         </p>
                         <!--
                         <p>
                            Ya tienes cuenta? <a href="./inicioSesion.html"> Inicie sesión</a>
                         </p>
                         -->
-                        */
                     </div>
                 </div>
             </form>

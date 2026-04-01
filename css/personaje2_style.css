@@ -171,21 +171,23 @@ main {
 /* Relleno base */
 .relleno {
     height: 100%;
-    background-color: #8a8a8a;
     width: 50%;
 }
 
 /* Valores de ejemplo */
 .relleno.vida {
-    width: 85%;
+    background-color: #2ECC71 ;
+    width: 65%;
 }
 
 .relleno.dano {
-    width: 42%;
+    background-color: #E74C3C ;
+    width: 89%;
 }
 
 .relleno.velocidad {
-    width: 30%;
+    background-color: #00BFFF;
+    width: 43%;
 }
 
 /* Habilidades */

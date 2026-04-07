@@ -31,4 +31,4 @@ function cuentas(){
             alert("Saldo insuficiente");
         }
     }
-}
+}  

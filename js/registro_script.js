@@ -24,15 +24,27 @@ function toggleBox() {
         bloquePrincipal.classList.remove('bloque-login');
         titulo.textContent = '¡Preregistro abierto!';
         btnSubmit.textContent = '¡Regístrate!';
-        textoAviso.textContent = '¿Ya tienes cuenta?';
+        textoAviso.textContent = '¿Ya tienes cuenta? ';
         toggleLink.textContent = 'Inicia sesión';
     } else {
         bloquePrincipal.classList.add('bloque-login');
         titulo.textContent = 'Inicia sesión';
         btnSubmit.textContent = '¡Inicie sesión!';
-        textoAviso.textContent = '¿No tienes cuenta?';
+        textoAviso.textContent = '¿No tienes cuenta? ';
         toggleLink.textContent = 'Regístrate';
     }
 }
+
+const formulario = document.querySelector('.formulario');
+
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const esLogin = document.getElementById('titulo').textContent === 'Inicia sesión';
+    const texto = esLogin ? '¡Inicio de sesión correcto!' : '¡Registro completado!';
+
+    localStorage.setItem('mensajeExito', texto);
+    window.location.href = '../index.html'; 
+});
 
 toggleLink.addEventListener('click', toggleBox);

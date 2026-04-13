@@ -199,3 +199,23 @@ footer {
     font-size: 13px;
     color: #555555;
 }
+
+/* Boton emergente con el registro */
+.notificacion {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    z-index: 10000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.5s ease;
+}
+
+.notificacion.exito {
+    background-color: #2ecc71;
+}

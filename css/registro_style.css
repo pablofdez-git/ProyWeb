@@ -66,7 +66,7 @@ main {
 .bloque {
     width: 100%;
     max-width: 520px;
-    min-height: auto;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #d9d9d9;
     border-radius: 14px;
@@ -79,8 +79,12 @@ main {
 }
 
 .bloque-login {
-    max-height: auto !important;
-    transition: max-height 0.4s ease;
+    max-width: 450px;
+    max-height: 600px;
+}
+
+.bajo {
+    margin-top: auto;
 }
 
 /* Texto */
@@ -173,15 +177,26 @@ main {
     font-size: 16px;
 }
 
+#aviso {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #0000ee;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#aviso:hover {
+    color: #0000aa;
+}
+
 .linea {
     background-color: black;
     height: 1px;
     width: 100%;
     margin-top: 0%;
-}
-
-.bajo {
-    margin-top: auto;
 }
 
 .norequeridos {}

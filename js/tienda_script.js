@@ -15,9 +15,10 @@ function cuentas(){
         if(precioMon <= totalMonedas){
             totalMonedas -= precioMon;
             cantidadMonedas.textContent = totalMonedas;
-            alert("Compra Realizada");
+            mostrarNotificacion("Compra Realizada", "exito");
+
         }else{
-            alert("Saldo insuficiente");
+            mostrarNotificacion("Saldo insuficiente", "error");
         }
     }else if(this.classList.contains('btn-gemas')){
         let precioGem = parseInt(this.textContent);
@@ -26,9 +27,26 @@ function cuentas(){
         if(precioGem <= totalGemas){
             totalGemas -= precioGem;
             cantidadGemas.textContent = totalGemas;
-            alert("Compra Realizada");
+            mostrarNotificacion("Compra Realizada", "exito");
         }else{
-            alert("Saldo insuficiente");
+            mostrarNotificacion("Saldo insuficiente", "error");
         }
     }
-}  
+}
+
+function mostrarNotificacion(mensaje, tipo){
+    const existente = document.querySelector('.notificacion');
+    if(existente){
+        existente.remove();
+    }
+
+    const notificacion = document.createElement('div');
+    notificacion.textContent = mensaje;
+
+    notificacion.classList.add('notificacion', tipo);
+    document.body.appendChild(notificacion);
+
+    setTimeout(() => {
+        notificacion.remove();
+    }, 2500);
+}

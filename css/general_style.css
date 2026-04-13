@@ -1,0 +1,79 @@
+/* --- BASE Y FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Fredoka', Arial, sans-serif;
+    color: #1a1a1a;
+    background-color: rgb(232, 232, 232);
+}
+
+/* --- CABECERA COMÚN --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.header-izq {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 65px;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1a1a1a;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.15s ease;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+.boton-jugar {
+    text-decoration: none;
+    background-color: #ffd900;
+    color: #1a1a1a;
+    border: 2px solid #000;
+    border-radius: 3px;
+    padding: 12px 22px;
+    font-weight: bold;
+}
+
+.boton-jugar:hover {
+    background-color: #ffaa00;
+}
+
+/* --- FOOTER COMÚN --- */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #d9d9d9;
+    padding: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #555555;
+}
+
+/* --- ANIMACIÓN DE FONDO (PATTERNS) --- */
+@keyframes moverFondo {
+    from { background-position: 0 0, 130px 130px; }
+    to { background-position: 260px 260px, 390px 390px; }
+}

@@ -1,83 +1,14 @@
-/* Base */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
-
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Fredoka', Arial, sans-serif;
-    color: #1a1a1a;
-    background-color: rgb(232, 232, 232);
-}
-
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-
     background-image: url("../imagenes/fondo_estatico.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     opacity: 0.15;
-}
-
-/* Cabecera */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #d9d9d9;
-}
-
-/* Agrupa logo + nav */
-.header-izq {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo {
-    height: 65px;
-}
-
-.nav {
-    display: flex;
-    gap: 15px;
-}
-
-/* Botones normales */
-.nav-link {
-    text-decoration: none;
-    color: #1a1a1a;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: background-color 0.15s ease;
-}
-
-.nav-link:hover {
-    background-color: #f0f0f0;
-}
-
-/* Botón de jugar */
-.boton-jugar {
-    text-decoration: none;
-    background-color: #ffd900;
-    color: #1a1a1a;
-    border: 2px solid #000;
-    border-radius: 3px;
-    padding: 12px 22px; 
-    font-weight: bold;
-}
-
-.boton-jugar:hover {
-    background-color: #ffaa00;
 }
 
 /* Main */
@@ -126,8 +57,6 @@ main {
     background-color: #ffaa00;
     transform: translateY(-3px);
 }
-
-
 
 /* Imagen principal */
 .imagen-principal {
@@ -184,16 +113,6 @@ main {
 .bloque p {
     line-height: 1.6;
     color: #333333;
-}
-
-/* Footer */
-footer {
-    background-color: #ffffff;
-    border-top: 1px solid #d9d9d9;
-    padding: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: #555555;
 }
 
 /* Boton emergente con el registro */

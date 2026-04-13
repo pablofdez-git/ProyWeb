@@ -10,7 +10,7 @@ function mostrarNotificacion(mensaje, tipo) {
 
     setTimeout(() => {
         notificacion.remove();
-    }, 2500);
+    }, 4000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
